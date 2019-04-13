@@ -19,7 +19,7 @@ variables:
 stages:
   - lint
 
-images_build:
+lint:
   stage: lint
   image: registry.gitlab.com/bbooomy/images/golang:latest
   before_script:
