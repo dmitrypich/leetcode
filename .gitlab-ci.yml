@@ -21,7 +21,7 @@ stages:
 
 lint:
   stage: lint
-  image: registry.gitlab.com/bbooomy/images/golang:latest
+  image: registry.gitlab.com/dmitrypich/images/golang:latest
   before_script:
     - alias GOLINTER='golangci-lint run --exclude-use-default=false --disable-all -E=stylecheck -E=golint -E=gosec -E=interfacer -E=unconvert -E=dupl -E=goconst -E=gofmt -E=goimports -E=maligned -E=depguard -E=misspell -E=unparam -E=nakedret -E=prealloc -E=scopelint -E=gocritic -E=govet -E=errcheck -E=staticcheck -E=unused -E=gosimple -E=structcheck -E=varcheck -E=ineffassign -E=deadcode -E=typecheck'
   script:
